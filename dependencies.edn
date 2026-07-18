@@ -1,0 +1,9 @@
+{:dependencies
+ [{:dependency/id etzhayyim/root
+   :dependency/repository "https://github.com/etzhayyim/root"
+   :dependency/revision "3d19f3b5b0cffb12cad12205604b6791c57c454d"
+   :dependency/paths ["90-docs/adr"]}
+  {:dependency/id org.kotoba-lang/kotoba
+   :dependency/revision "fc7e98bec18b841825da64940aa5898505de56df"
+   :dependency/west-path "orgs/kotoba-lang/kotoba"
+   :dependency/paths ["crates/kotoba-clj" "crates/kotoba-runtime/wit"]}]}

@@ -15,7 +15,7 @@ ADR-2605215000 §1 に抵触しない)。
 |---|---|
 | `apqc-pcf.kotoba.edn` | PCF v7.4 の EAVT Datom スキーマ + `:representative` seed。**全 13 L1 + 全 13 L1 + 全 72 L2 + 代表 L3 (352)、計 438 行**（9.0→9.1→9.1.1→9.1.1.1 / 7.0→7.1→7.1.1 含む）。`:apqc.process/code` が `:db.unique/identity`。 |
 | `apqc-coordinator.clj` | kotoba-clj `defgraph` cell。`run(ctx)` が CBOR `{code, mode}` を復号し `:route → (if-edge summarize? :summarize :lookup)`。`:lookup` は `kqe-get-objects` で `apqc.process/name` Datom を読み、`:summarize` は `llm-infer`。 |
-| `apqc-coordinator.wasm` | コンパイル済み WASM Component (kotoba:kais world)。 |
+| `apqc-coordinator.wasm` | `build.sh` が生成する WASM Component（git 管理外）。 |
 
 ## ctx 契約
 
@@ -30,10 +30,10 @@ WasmExecutor は **kotoba substrate エンジン(sibling repo)の汎用 `kotoba-
 
 ```sh
 ./build.sh        # apqc-coordinator.clj → apqc-coordinator.wasm (kotoba-clj CLI)
-./run_tests.sh    # seed 整合(bb) + gaps + ビルド + WasmExecutor スモーク(lookup / ratio)
+(cd .. && clojure -M -e '(load-file "run_tests.clj")') # repository / seed contract suite
 ```
 
-`run_tests.sh` の検証:
+root の `run_tests.clj` の検証:
 
 - `validate.clj` — seed 不変条件 5/5 PASS
 - `query.clj … gaps` — カバレッジ・ワークリスト

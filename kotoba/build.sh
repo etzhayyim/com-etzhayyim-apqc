@@ -4,11 +4,11 @@
 # The Clojure→WASM compiler is a GENERIC capability of the kotoba substrate
 # engine (sibling repo); this actor merely calls the `kotoba-clj` CLI. Nothing
 # ISCO/APQC-specific lives in kotoba — see ADR layering (kotoba = engine,
-# 20-actors/* = domain actors).
+# independent actor repositories = domain actors).
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-# sibling kotoba checkout (orgs/etzhayyim/kotoba); override with KOTOBA_DIR.
-KOTOBA_DIR="${KOTOBA_DIR:-$HERE/../../../../kotoba}"
+# Flat west sibling checkout (`orgs/kotoba-lang/kotoba`); override with KOTOBA_DIR.
+KOTOBA_DIR="${KOTOBA_DIR:-$HERE/../../../kotoba-lang/kotoba}"
 WIT="$KOTOBA_DIR/crates/kotoba-runtime/wit"
 
 # the coordinator cell = the .clj that is not a tool script

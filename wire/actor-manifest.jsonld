@@ -32,10 +32,10 @@
   },
   "implementation": {
     "substrate": "kotoba-datomic (kqe-over-Datom-log; ADR-2605262130 + 2605312345)",
-    "cell": "kotoba/apqc-coordinator.clj → apqc-coordinator.wasm (kotoba:kais world)",
+    "cell": "kotoba/apqc-coordinator.clj → build-generated apqc-coordinator.wasm (kotoba:kais world)",
     "seed": "kotoba/apqc-pcf.kotoba.edn",
     "build": "kotoba/build.sh (generic kotoba-clj CLI)",
-    "verify": "kotoba/run_tests.sh"
+    "verify": "clojure -M -e '(load-file \"run_tests.clj\")'"
   },
   "sourcing": {
     "L1": "authoritative (public canonical PCF v7.4 category names)",

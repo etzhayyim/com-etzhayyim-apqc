@@ -7,9 +7,13 @@ WASM Component.
 
 - DID: `did:web:apqc.etzhayyim.com`
 - Implementation: `kotoba/` (see `kotoba/README.md` + `kotoba/MATURITY.md`)
-- Build: `kotoba/build.sh` (generic `kotoba-clj` CLI — the engine stays in the
-  sibling `kotoba` repo; this actor only calls it)
-- Verify: `kotoba/run_tests.sh` (seed integrity + cell build + WasmExecutor smoke)
+- Build: `kotoba/build.sh` (generic `kotoba-clj` CLI from the revision-pinned
+  `orgs/kotoba-lang/kotoba` flat west checkout; generated WASM is not committed)
+- Verify: `clojure -M -e '(load-file "run_tests.clj")'` (canonical EDN contracts,
+  seed integrity, dependency pins, and Murakumo scaffold)
+
+Canonical metadata, identity, dependencies, PCF data, and lexicons are EDN. JSON/JSON-LD
+and BPMN interoperability contracts live under `wire/`; they are not repository truth.
 
 ## Sourcing (G8/G11)
 

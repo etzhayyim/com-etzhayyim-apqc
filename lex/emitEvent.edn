@@ -1,0 +1,33 @@
+{"lexicon" 1,
+ "id" "com.etzhayyim.apqc.emitEvent",
+ "defs"
+ {"main"
+  {"type" "procedure",
+   "description"
+   "Write an APQC OCEL event through the pyzeebe runtime.",
+   "input"
+   {"encoding" "application/json",
+    "schema"
+    {"type" "object",
+     "required" ["apqcCode" "eventType"],
+     "properties"
+     {"caseId" {"type" "string"},
+      "actorDid" {"type" "string"},
+      "eventType" {"type" "string"},
+      "objects" {},
+      "dryRun" {"type" "boolean"},
+      "attributes" {},
+      "taskId" {"type" "string"},
+      "apqcCode" {"type" "string"},
+      "callerDid" {"type" "string"}}}},
+   "output"
+   {"encoding" "application/json",
+    "schema"
+    {"type" "object",
+     "properties"
+     {"ok" {"type" "boolean"},
+      "vertexId" {"type" "string"},
+      "ocelEventId" {"type" "string"},
+      "apqcCode" {"type" "string"},
+      "eventType" {"type" "string"},
+      "error" {"type" "string"}}}}}}}

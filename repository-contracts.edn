@@ -1,0 +1,13 @@
+{:repository/name "com-etzhayyim-apqc"
+ :repository/category :actor
+ :repository/canonical-format :edn
+ :repository/canonical-metadata "manifest.edn"
+ :repository/canonical-identity "identity.edn"
+ :repository/dependencies "dependencies.edn"
+ :repository/source-roots ["src" "kotoba"]
+ :repository/test-roots ["test"]
+ :repository/lexicons "lex"
+ :repository/canonical-data ["kotoba.app.edn" "kotoba/apqc-pcf.kotoba.edn"]
+ :repository/external-wire "wire"
+ :repository/generated-artifacts ["kotoba/apqc-coordinator.wasm"]
+ :repository/legacy-artifacts-forbidden ["actor-manifest.jsonld" "kotoba/run_tests.sh"]}
