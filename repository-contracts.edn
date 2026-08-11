@@ -1,4 +1,4 @@
-{:repository/name "com-etzhayyim-apqc"
+{:repository/name "apqc"
  :repository/category :actor
  :repository/canonical-format :edn
  :repository/canonical-metadata "manifest.edn"
