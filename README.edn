@@ -1,0 +1,6 @@
+{:repo/id "cloud-itonami/apqc"
+ :repo/plane :role
+ :repo/role :process-classification-coordinator
+ :repo/catalog "cloud-itonami/org-apqc-pcf"
+ :repo/compatibility-identities ["did:web:apqc.etzhayyim.com"
+                                 "com.etzhayyim.apqc.*"]}

@@ -1,5 +1,13 @@
 # apqc — APQC PCF Coordinator (actor)
 
+**Repository**: `cloud-itonami/apqc`
+
+This repository owns operational lookup, materialization, and coverage
+coordination. The redistributable APQC catalog boundary remains in
+`cloud-itonami/org-apqc-pcf`; licensed customer mappings are not copied here.
+The historical DID and `com.etzhayyim.*` namespaces remain compatibility
+identities.
+
 APQC Process Classification Framework (PCF v7.4 cross-industry) as a kotoba-native
 Tier-B actor. Sibling of `isco`; both implement the kqe-over-Datom-log substrate
 (ADR-2605262130 + ADR-2605312345) with a `kotoba-clj` defgraph cell compiled to a
