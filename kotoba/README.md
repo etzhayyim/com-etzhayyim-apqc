@@ -50,7 +50,7 @@ mode: 0 lookup / 1 summarize(llm-infer) / 2 coverage / 3 parent / 4 children / 5
   `did:web:apqc.etzhayyim.com` 配下へ登録。
 
 <!-- coverage-worklist:auto -->
-## Coverage worklist (auto — `bb query.clj <seed> gaps`)
+## Coverage worklist (auto — `kbb query.cljk <seed> gaps`)
 
 Non-leaf nodes with zero children = where deeper `:representative` detail is still missing. `gaps: 283`. Sample:
 
