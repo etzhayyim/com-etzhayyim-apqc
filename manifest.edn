@@ -27,10 +27,10 @@
  {"substrate"
   "kotoba-datomic (kqe-over-Datom-log; ADR-2605262130 + 2605312345)",
   "cell"
-  "kotoba/apqc-coordinator.clj → build-generated apqc-coordinator.wasm (kotoba:kais world)",
+  "kotoba/apqc-coordinator.cljk → build-generated apqc-coordinator.wasm (kotoba:kais world)",
   "seed" "kotoba/apqc-pcf.kotoba.edn",
   "build" "kotoba/build.sh (generic kotoba-clj CLI)",
-  "verify" "run_tests.clj"},
+  "verify" "run_tests.cljk"},
  "description"
  "APQC Process Classification Framework (PCF v7.4 cross-industry) managed as a kotoba-native Datom graph (L1→L2→L3→L4) with a clj→WASM coordinator cell. Process lookup, parent/child traversal, materialize-subprocesses, and coverage snapshot via the kqe Datom surface.",
  "governance" {"classification" "internal", "raci" "responsible"}}
